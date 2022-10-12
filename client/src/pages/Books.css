@@ -1,0 +1,19 @@
+.books-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90vw;
+  max-width: 1600px;
+  margin: 30px auto;
+}
+h1 {
+  text-align: center;
+}
+.book {
+  min-width: 300px;
+  max-width: 500px;
+  min-height: 400px;
+  margin: 30px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 5px 5px 5px 5px rgba(210, 210, 210, 0.765);
+}
