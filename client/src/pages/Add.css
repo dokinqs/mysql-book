@@ -1,0 +1,34 @@
+.add-div {
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1601807576163-587225545555?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+}
+.form-add {
+  max-width: 600px;
+  margin: auto;
+  background: #e6e6e6bd;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 5px 5px 5px 5px #87817b80;
+}
+.add-div h1 {
+  text-align: center;
+}
+input {
+  display: block;
+  margin: 20px auto;
+  width: 350px;
+  padding: 10px;
+}
+input:nth-of-type(3) {
+  width: 90px;
+  margin-bottom: 50px;
+}
+button {
+  font-size: 1.1rem;
+}
+button:hover {
+  background-color: #eae6e1bd;
+}

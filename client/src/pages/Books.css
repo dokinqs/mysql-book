@@ -1,19 +1,19 @@
 .books-container {
   display: flex;
   flex-wrap: wrap;
-  width: 90vw;
+  justify-content: center;
   max-width: 1600px;
   margin: 30px auto;
 }
-h1 {
+.books-div h1 {
   text-align: center;
 }
 .book {
-  min-width: 300px;
-  max-width: 500px;
-  min-height: 400px;
+  width: 350px;
+  height: 400px;
   margin: 30px;
   padding: 20px;
   text-align: center;
-  box-shadow: 5px 5px 5px 5px rgba(210, 210, 210, 0.765);
+  box-shadow: 3px 3px 10px 3px rgb(178, 178, 178);
+  background-color: #e6e6e6;
 }

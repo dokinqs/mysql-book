@@ -30,8 +30,9 @@ app.get("/books", (req, res) => {
 });
 
 app.post("/books", (req, res) => {
-  const q = "INSERT INTO books (`title`, `desc`, `img`) VALUES (?)";
-  const values = [req.body.title, req.body.desc, req.body.img];
+  const q = "INSERT INTO books (`title`, `desc`, `price`, `img`) VALUES (?)";
+  const values = [req.body.title, req.body.desc, req.body.price, req.body.img];
+
   // have to put brackets around [values]
   db.query(q, [values], (err, data) => {
     if (err) return res.json(err);

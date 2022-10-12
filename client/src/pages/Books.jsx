@@ -18,7 +18,7 @@ const Books = () => {
   }, []);
 
   return (
-    <div>
+    <div className="books-div">
       <h1>Book Club</h1>
       <div className="books-container">
         {books.map((book) => (
