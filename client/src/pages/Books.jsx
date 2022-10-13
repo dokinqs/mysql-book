@@ -10,25 +10,37 @@ const Books = () => {
       try {
         const res = await axios.get("http://localhost:9000/books");
         setBooks(res.data);
-      } catch (e) {
-        console.log(e);
+      } catch (err) {
+        console.log(err);
       }
     };
     fetchBooks();
   }, []);
 
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`http://localhost:9000/books/${id}`);
+      window.location.reload();
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div className="books-div">
       <h1>Book Club</h1>
+
       <div className="books-container">
         {books.map((book) => (
           <div className="book" key={book.id}>
             {book.img && <img src={book.img} alt={book.id} />}
-            {/* <div> */}
             <h2>{book.title}</h2>
             <p>{book.desc}</p>
-            <span>{book.price}</span>
-            {/* </div> */}
+            <span>${book.price}</span>
+            <button className="delete" onClick={() => handleDelete(book.id)}>
+              Delete
+            </button>
+            {/* <button className="update">Update</button> */}
           </div>
         ))}
       </div>

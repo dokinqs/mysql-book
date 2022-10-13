@@ -16,7 +16,6 @@ const Add = () => {
   const handleChange = (e) => {
     setBook((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
-  // console.log(book);
 
   const handleClick = async (e) => {
     e.preventDefault();
