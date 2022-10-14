@@ -1,31 +1,84 @@
-.books-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1600px;
-  margin: 30px auto;
-}
 .books-div h1 {
   text-align: center;
 }
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 360px);
+  justify-content: space-around;
+  grid-gap: 10px;
+  align-items: flex-start;
+  padding: 0 3vw;
+}
 .book {
-  width: 350px;
-  height: 520px;
-  margin: 30px;
+  width: 370px;
+  /* height: 620px; */
+  margin: auto;
+  margin-bottom: 30px;
   padding: 20px;
   text-align: center;
   box-shadow: 3px 3px 10px 3px rgb(178, 178, 178);
-  background-color: #e6e6e6;
+  background-color: #f2edeb;
+}
+.img-container {
+  height: 300px;
 }
 img {
   max-width: 100%;
-  max-height: 300px;
+  height: 300px;
 }
-/* .delete {
-  margin-top: 30px;
+.desc {
+  inline-size: auto;
+  overflow-wrap: break-word;
+  height: 100px;
+  max-height: fit-content;
+  overflow-y: auto;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.book button {
+  font-size: 0.7rem;
+  padding: 4px 10px;
+}
+.delete {
   float: left;
+  color: #c11d1d;
+  border: 2px solid #c11d1d;
 }
 .update {
-  margin-top: 30px;
   float: right;
-} */
+}
+
+@media only screen and (max-width: 861px) {
+  .book {
+    width: 250px;
+    height: 550px;
+    padding: 10px;
+  }
+  img {
+    max-height: 250px;
+  }
+  .book h3 {
+    font-size: 1rem;
+  }
+  .book p,
+  .book span {
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (max-width: 861px) {
+  .books-container {
+    grid-template-columns: repeat(auto-fill, 250px);
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 549px) {
+  .books-container {
+    display: block;
+  }
+  .book {
+    width: 320px;
+  }
+}

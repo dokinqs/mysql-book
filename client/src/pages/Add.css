@@ -32,3 +32,10 @@ button {
 button:hover {
   background-color: #eae6e1bd;
 }
+
+@media only screen and (max-width: 600px) {
+  .form-add {
+    padding: 5px;
+    border-radius: 0;
+  }
+}

@@ -29,35 +29,44 @@ const Add = () => {
 
   return (
     <div className="add-div">
-      <form className="form-add">
+      {/* use onSubmit on form instead of onClick on submit button to use HTML5 validation in React */}
+      <form className="form-add" onSubmit={handleClick}>
         <h1>Add a New Book</h1>
         <input
           type="text"
           placeholder="Title"
           name="title"
+          maxLength="45"
           onChange={handleChange}
+          required
         />
         <input
           type="text"
           placeholder="Description"
           name="desc"
+          maxLength="255"
           onChange={handleChange}
+          required
         />
         <input
           type="number"
           placeholder="Price"
           name="price"
+          min="0"
+          max="99"
+          maxLength="3"
+          pattern="[0-9]{2}"
           onChange={handleChange}
+          required
         />
         <input
           type="Text"
           placeholder="Image"
           name="img"
+          maxLength="200"
           onChange={handleChange}
         />
-        <button type="submit" onClick={handleClick}>
-          Add Book
-        </button>
+        <button type="submit">Add Book</button>
       </form>
     </div>
   );
