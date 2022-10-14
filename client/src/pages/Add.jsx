@@ -23,8 +23,8 @@ const Add = () => {
     try {
       await axios.post("http://localhost:9000/books", book);
       navigate("/");
-    } catch (e) {
-      console.log(e);
+    } catch (err) {
+      console.log(err);
     }
   };
 
