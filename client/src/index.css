@@ -1,15 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 * {
   box-sizing: border-box;
 }
 body {
   margin: 0;
   padding: 0;
-  font-family: "Gentium Book Basic", "Helvetica Neue", serif;
+  font-family: "Playfair Display", "Helvetica Neue", serif;
+}
+h1 {
+  margin: 0;
 }
 h3,
 p {
   margin: 5px;
+}
+p {
+  font-size: 12px;
+  color: #888;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 input,
 button {
@@ -20,6 +31,6 @@ button {
   cursor: pointer;
   background-color: white;
   display: block;
-  margin: 10px auto;
+  margin: 5px auto;
   padding: 6px 20px;
 }

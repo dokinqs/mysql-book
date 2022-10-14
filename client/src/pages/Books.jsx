@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import "./Books.css";
 
 const Books = () => {
@@ -29,7 +30,9 @@ const Books = () => {
   return (
     <div className="books-div">
       <h1>Book Club</h1>
-
+      <button className="link-add">
+        <Link to="/add">+ Add Book</Link>
+      </button>
       <div className="books-container">
         {books.map((book) => (
           <div className="book" key={book.id}>

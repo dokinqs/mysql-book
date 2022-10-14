@@ -5,6 +5,13 @@
   background-repeat: no-repeat;
   padding-top: 100px;
 }
+.link-books {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 0.7rem;
+  padding: 4px 10px;
+}
 .form-add {
   max-width: 600px;
   margin: auto;

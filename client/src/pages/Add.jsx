@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import "./Add.css";
 
 const Add = () => {
@@ -29,6 +30,9 @@ const Add = () => {
 
   return (
     <div className="add-div">
+      <button className="link-books">
+        <Link to="/">Home</Link>
+      </button>
       {/* use onSubmit on form instead of onClick on submit button to use HTML5 validation in React */}
       <form className="form-add" onSubmit={handleClick}>
         <h1>Add a New Book</h1>
