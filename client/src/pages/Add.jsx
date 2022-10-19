@@ -38,7 +38,7 @@ const Add = () => {
         <h1>Add a New Book</h1>
         <input
           type="text"
-          placeholder="Title"
+          placeholder="*Title"
           name="title"
           maxLength="45"
           onChange={handleChange}
@@ -46,7 +46,7 @@ const Add = () => {
         />
         <input
           type="text"
-          placeholder="Description"
+          placeholder="*Description"
           name="desc"
           maxLength="255"
           onChange={handleChange}
@@ -54,7 +54,7 @@ const Add = () => {
         />
         <input
           type="number"
-          placeholder="Price"
+          placeholder="*Price"
           name="price"
           min="0"
           max="99"

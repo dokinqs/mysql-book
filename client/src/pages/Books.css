@@ -4,7 +4,7 @@
 .books-div h1 {
   text-align: center;
   padding: 20px;
-  background: #8a6755;
+  background: #57392a;
   color: white;
   letter-spacing: 2px;
 }
@@ -21,19 +21,27 @@
   justify-content: space-around;
   grid-gap: 10px;
   padding: 30px 3vw;
+  min-height: calc(100vh - 104px);
 }
 .book {
   width: 370px;
-  height: 610px;
+  height: 580px;
   margin: auto;
   margin-bottom: 30px;
   padding: 20px;
   text-align: center;
-  box-shadow: 3px 3px 10px 3px rgb(178, 178, 178);
-  background-color: rgb(231, 224, 221);
+  box-shadow: 3px 3px 10px 3px #303030;
+  background-color: #fff;
+
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .book:nth-of-type(even) {
-  background-color: #f8f4e8;
+  background-color: #57392a;
+  color: white;
 }
 
 .img-container {
@@ -50,30 +58,40 @@ img {
   height: 100px;
   max-height: fit-content;
   overflow-y: auto;
+  color: inherit;
+  margin-top: 20px;
 }
 
-.clearfix::after {
+/* .clearfix::after {
   content: "";
   clear: both;
   display: table;
-}
-.book button {
+} */
+/* .book button {
   font-size: 0.7rem;
   padding: 4px 10px;
-}
+} */
 .delete {
-  float: left;
-  color: #c11d1d;
-  border: 2px solid #c11d1d;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  /* float: left; */
+  color: black;
+  border: 3px solid black;
+  font-size: 0.7rem;
+  padding: 3px 6px;
 }
-.update {
+.delete:hover {
+  background: #e2d0d0;
+}
+/* .update {
   float: right;
-}
+} */
 
 @media only screen and (max-width: 861px) {
   .book {
     width: 250px;
-    height: 615px;
+    height: 580px;
     padding: 10px;
   }
   img {
@@ -86,8 +104,6 @@ img {
   .book span {
     font-size: 0.7rem;
   }
-}
-@media only screen and (max-width: 861px) {
   .books-container {
     grid-template-columns: repeat(auto-fill, 250px);
     padding: 20px;
@@ -95,9 +111,14 @@ img {
 }
 @media only screen and (max-width: 549px) {
   .books-container {
+    grid-template-columns: none;
     display: block;
   }
   .book {
-    width: 320px;
+    width: 80vw;
+    height: 530px;
+  }
+  .link-add {
+    top: 75px;
   }
 }

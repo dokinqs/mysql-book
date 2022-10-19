@@ -27,7 +27,7 @@ input {
   padding: 10px;
 }
 input:nth-of-type(3) {
-  width: 90px;
+  width: 100px;
   margin-bottom: 50px;
 }
 button {

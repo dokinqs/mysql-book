@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Update from "./Update.jsx";
 import "./Books.css";
 
 const Books = () => {
@@ -48,14 +49,19 @@ const Books = () => {
             <h3>{book.title}</h3>
             <p className="desc">{book.desc}</p>
             <span>${book.price}</span>
-            <div className="clearfix">
-              <button className="delete" onClick={() => handleDelete(book.id)}>
-                Delete
-              </button>
-              <button className="update">
+            {/* <div className="clearfix"> */}
+            <button className="delete" onClick={() => handleDelete(book.id)}>
+              X
+            </button>
+            {/* <button
+                className="update"
+                onClick={() => {
+                  <Update bookToEdit={book} />;
+                }}
+              >
                 <Link to={`/update/${book.id}`}>Update</Link>
-              </button>
-            </div>
+              </button> */}
+            {/* </div> */}
           </div>
         ))}
       </div>
